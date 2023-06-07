@@ -1,0 +1,12 @@
+mat-toolbar{
+    justify-content: space-between;
+}
+.content{
+    min-height: calc(100vh - 130px);
+    padding: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+}

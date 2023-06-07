@@ -1,0 +1,22 @@
+<div class="form-container mat-elevation-z5">
+    <h1>Login</h1>
+    <form [formGroup]="loginForm" (ngSubmit)="submit()">
+        <!-- email -->
+        <mat-form-field>
+            <input matInput placeholder="Email address" formControlName="email" />
+            <mat-error *ngIf="email?.errors?.['required']"> Email is Required</mat-error>
+            <mat-error *ngIf="email?.errors?.['email']"> Please enter a correct email format</mat-error>
+        </mat-form-field>
+        <!-- password -->
+        <mat-form-field>
+            <input matInput placeholder="password" formControlName="password" type="password" />
+            <mat-error *ngIf="password?.errors?.['required']"> Password is Required</mat-error>
+     </mat-form-field>
+        <div class="center margin-top">
+            <button mat-raised-button color="primary" type="submit" routerLink="table">Login</button>
+        </div>
+        <span class="center margin-top"> Create Account!! <a class="sign-up-link" routerLink ="/signup">Sign
+                Up!!!</a></span>
+
+    </form>
+</div>

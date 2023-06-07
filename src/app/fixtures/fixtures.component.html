@@ -1,0 +1,73 @@
+<mat-toolbar color="primary">
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+    <mat-icon>sports_soccer</mat-icon>
+  </button>
+  <span>Premiere League</span>
+</mat-toolbar>
+
+<div class="dialog-contents">
+  <mat-form-field>
+    <mat-label>Team A</mat-label>
+    <div *ngFor="let team of teams | filterTeam:selectedTeam">
+      {{ team.name }}
+    </div>
+    <mat-select [(ngModel)]="form.value.teamA" name="teamA">
+      <mat-option *ngFor="let team of dataSource" [value]="team">{{ team.name }}</mat-option>
+      
+      
+    </mat-select>
+  </mat-form-field>
+
+
+  <mat-form-field>
+   
+    <mat-label>Team B</mat-label>
+    <div *ngFor="let team of teams | filterTeam:selectedTeam">
+      {{ team.name }}
+    </div>
+    <mat-select [(ngModel)]="form.value.teamB">
+      <mat-option *ngFor="let team of dataSource" [value]="team">{{team.name }}
+        
+      </mat-option>
+    </mat-select>
+  </mat-form-field>  <mat-form-field>
+   
+    <mat-label>Winner</mat-label>
+    <div *ngFor="let team of teams | filterTeam:selectedTeam">
+      {{ team.name }}
+    </div>
+    <mat-select [(ngModel)]="form.value.team">
+      <mat-option *ngFor="let team of dataSource" [value]="team">{{team.name }}
+        
+      </mat-option>
+    </mat-select>
+  </mat-form-field> 
+  
+    
+    
+        <mat-form-field>
+          <mat-label>Goals: {{ form.value.teamA.name }}</mat-label>
+          <input matInput [(ngModel)]="form.value.teamAGoals"   type="number"/>
+        </mat-form-field>
+      
+      
+      
+        <mat-form-field >
+          <mat-label>Goals: {{ form.value.teamB.name }}</mat-label>
+          <input matInput [(ngModel)]="form.value.teamBGoals"  type="number"/>
+        </mat-form-field>
+      
+    
+
+
+
+  <button mat-raised-button color="warn" class="btn" (click)="TableUpdate()">
+    Update
+    
+  </button>
+
+<mat-dialog-actions align ="end">
+  <button mat-button mat-dialog-close>Close</button>
+</mat-dialog-actions>
+
+</div>

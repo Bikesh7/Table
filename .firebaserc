@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "myproject-a47be": {
+      "hosting": {
+        "Points": [
+          "myproject-a47be"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "myproject-a47be"
+  }
+}

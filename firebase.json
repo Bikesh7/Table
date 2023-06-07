@@ -1,0 +1,9 @@
+{
+  "hosting": [
+    {
+      "target": "Points",
+      "source": ".",
+      "frameworksBackend": {}
+    }
+  ]
+}
